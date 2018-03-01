@@ -1,0 +1,40 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Tables</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <main>
+            <table>
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                    <th>Column 4</th>
+                    <th>Column 5</th>
+                </tr>
+                <script>
+                    let i = 0;
+                    while (i < 10) {
+                        document.write('<tr><td>99,999,999.99999999</td><td>99,999,999.99999999</td><td>99,999,999.99999999</td><td>99,999,999.99999999</td><td>99,999,999.99999999</td></tr>');
+                        i++;
+                    }
+                </script>
+                
+            </table>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>
+            $("tr td").each(function(){
+                $(this).html("<span>" + $(this).html() + "</span>")
+            })
+        </script>
+    </body>
+</html>
